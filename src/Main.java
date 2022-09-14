@@ -2,15 +2,13 @@ import java.util.Scanner;
 
 public class Main {
 	public static void main(String[] args) {
-//		While loop executes a block of code as long as its condition remains true
-		Scanner scanner = new Scanner(System.in);
-		String name = "";
+//		For loop executes a block of code a limited amount of times
+		for(int i = 0; i <= 10; i++) {
+			System.out.println("Count up: "+ i);
+		}
 		
-		do {
-			System.out.print("Enter your name: ");
-			name = scanner.nextLine();
-		} while(name.isBlank());
-		
-		System.out.println("Hello " + name);
+		for(int i = 10; i >= 0; i--) {
+			System.out.println("Count down: "+ i);
+		}
 	}
 }
