@@ -1,35 +1,16 @@
 public class Main {
 	public static void main(String[] args) {
-//		2D arrays is an array of arrays
-		String[][] cars = new String[3][3];
-		cars[0][0] = "Camaro";
-		cars[0][1] = "Corvette";
-		cars[0][2] = "Silverado";
-		cars[1][0] = "Mustang";
-		cars[1][1] = "Ranger";
-		cars[1][2] = "F-150";
-		cars[2][0] = "Ferrari";
-		cars[2][1] = "Lambo";
-		cars[2][2] = "Tesla";
+//		autoboxing = mengubah primitive class ke wrapper class
+//		unboxing = mengubah wrapper class ke primitive class
+		Boolean a = true;
+		Character b = '@';
+		Integer c = 123;
+		Double d = 3.14;
+		String e = "Bro";		
 		
-		for(int i=0; i<cars.length; i++) {
-			System.out.println();
-			for(int j=0; j<cars[i].length; j++) {
-				System.out.println(cars[i][j] + " ");
-			}
-		}
-		
-		String[][] cars2 = {
-				{"Camaro", "Corvette", "Silverado"}, 
-				{"Mustang", "Ranger", "F-150"}, 
-				{"Ferrari", "Lambo", "Tesla"}
-				};
-		
-		for(int i=0; i<cars2.length; i++) {
-			System.out.println();
-			for(int j=0; j<cars2[i].length; j++) {
-				System.out.println(cars2[i][j] + " ");
-			}
+//		ketika kita melakukan pengecekan, terjadi proses unboxing, sehingga kita mengecek primitive data type nya
+		if(a==true) {
+			System.out.println("This is true!");
 		}
 	}
 }
