@@ -1,21 +1,35 @@
 public class Main {
 	public static void main(String[] args) {
-//		Array must store the same data type
-		String[] cars = {"Camaro", "Corvet", "Tesla"};
+//		2D arrays is an array of arrays
+		String[][] cars = new String[3][3];
+		cars[0][0] = "Camaro";
+		cars[0][1] = "Corvette";
+		cars[0][2] = "Silverado";
+		cars[1][0] = "Mustang";
+		cars[1][1] = "Ranger";
+		cars[1][2] = "F-150";
+		cars[2][0] = "Ferrari";
+		cars[2][1] = "Lambo";
+		cars[2][2] = "Tesla";
 		
-		cars [0] = "Mustang";
+		for(int i=0; i<cars.length; i++) {
+			System.out.println();
+			for(int j=0; j<cars[i].length; j++) {
+				System.out.println(cars[i][j] + " ");
+			}
+		}
 		
-		System.out.println(cars[0]);
+		String[][] cars2 = {
+				{"Camaro", "Corvette", "Silverado"}, 
+				{"Mustang", "Ranger", "F-150"}, 
+				{"Ferrari", "Lambo", "Tesla"}
+				};
 		
-//		Alternative way to create an Array
-		String[] cars2 = new String[3];
-		cars2[0] = "Camaro";
-		cars2[1] = "Corvette";
-		cars2[2] = "Tesla";
-		
-//		for loop for an Array
-		for(int i = 0; i < cars.length; i++) {
-			System.out.println(cars[i]);
+		for(int i=0; i<cars2.length; i++) {
+			System.out.println();
+			for(int j=0; j<cars2[i].length; j++) {
+				System.out.println(cars2[i][j] + " ");
+			}
 		}
 	}
 }
