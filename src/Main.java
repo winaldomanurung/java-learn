@@ -1,47 +1,32 @@
-import java.time.LocalDate;
+import java.util.Scanner;
 
 public class Main {
 	public static void main(String[] args) {
-		LocalDate today = LocalDate.now();
-		int month = today.getMonthValue();
+//		AND operator
+		int temp = 25;
 		
-		switch (month) {
-			case 1:
-				System.out.println("January");
-				break;
-			case 2:
-				System.out.println("February");
-				break;
-			case 3:
-				System.out.println("March");
-				break;
-			case 4:
-				System.out.println("April");
-				break;
-			case 5:
-				System.out.println("May");
-				break;
-			case 6:
-				System.out.println("June");
-				break;
-			case 7:
-				System.out.println("July");
-				break;
-			case 8:
-				System.out.println("August");
-				break;
-			case 9:
-				System.out.println("September");
-				break;
-			case 10:
-				System.out.println("October");
-				break;
-			case 11:
-				System.out.println("November");
-				break;
-			case 12:
-				System.out.println("December");
-				break;
+		if (temp>30) {
+			System.out.println("It is hot outside");
+		} else if (temp >= 20 && temp <=30) {
+			System.out.println("It is warm outside");
+		} else {
+			System.out.println("It is cold outside");
 		}
+		
+//		OR operator
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("You are playing a game! Press q or Q to quit.");
+		String response = scanner.next();
+		
+		if (response.equals("q") || response.equals("Q")) {
+			System.out.println("You quit the game");
+		} else {
+			System.out.println("You are still playing the game.");
+		}
+				
+//		NOT operator
+		boolean isJavaFun = true;
+		System.out.println(isJavaFun);
+		System.out.println(!isJavaFun);
 	}
 }
