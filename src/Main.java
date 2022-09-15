@@ -1,24 +1,32 @@
-import java.util.ArrayList;
 
 public class Main {
 	public static void main(String[] args) {
-//		For-Each => traversing technique to iterate through the elements in an array/collection
-//		+ Using less steps and more readable
-//		- Less flexible
-		String[]animals = {"cat", "dog", "rat", "bird"};
-		ArrayList<String> animals2 = new ArrayList<String>();
-		
-		animals2.add("cat");
-		animals2.add("dog");
-		animals2.add("rat");
-		animals2.add("bird");
-		
-		for(String i : animals) {
-			System.out.println(i);
-		}
-		
-		for(String i : animals2) {
-			System.out.println(i);
-		}
+		String name = "Aldo";
+		int age = 21;
+		int x = 3;
+		int y = 4;
+		hello();
+		helloName(name);
+		helloNameAge(name, age);
+		int z = add(x,y);
+		System.out.println(z);
+	}
+//		method is a block of code that is executed whenever it is called upon
+	
+	static void hello() {
+		System.out.println("Hello");		
+	}
+	
+	static void helloName(String name) {
+		System.out.println("Hello "+ name);		
+	}
+
+	static void helloNameAge(String name, int age) {
+		System.out.println("Hello "+ name +". You are "+ age + " years old");	
+	}
+	
+	static int add(int x, int y) {
+		int z = x + y;
+		return z;
 	}
 }
