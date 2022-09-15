@@ -1,16 +1,21 @@
+import java.util.ArrayList;
+
 public class Main {
 	public static void main(String[] args) {
-//		autoboxing = mengubah primitive class ke wrapper class
-//		unboxing = mengubah wrapper class ke primitive class
-		Boolean a = true;
-		Character b = '@';
-		Integer c = 123;
-		Double d = 3.14;
-		String e = "Bro";		
+// 		ArrayList is a resizable array
+//		Elements can be added and removed after compilation phase 
+//		Only store reference data types
+		ArrayList<String> food = new ArrayList<String>();
+		food.add("pizza");
+		food.add("hamburger");
+		food.add("hotdog");
 		
-//		ketika kita melakukan pengecekan, terjadi proses unboxing, sehingga kita mengecek primitive data type nya
-		if(a==true) {
-			System.out.println("This is true!");
+		food.set(0, "sushi");
+		food.remove(2);
+		food.clear();
+		
+		for(int i=0;i<food.size();i++) {
+			System.out.println(food.get(i));
 		}
 	}
 }
