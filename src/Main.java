@@ -1,20 +1,17 @@
 
 public class Main {
 	public static void main(String[] args) {
-//	static keyword merupakan modifier.
-//		A single copy of a variable/method is created and shared
-//		The class 'owns' the static member
+//		inheritance is the process where one class acquires the attributes and methods of another
 		
-		Friend friend1 = new Friend("Spongebob");
-		Friend friend2 = new Friend("Patrick");
+		Car car = new Car();
+		car.go();
 		
-//		numberoffriends bisa langsung dipanggil langsung dari Class tanpa instantiation karena dia sifatnya static variable
-//		antara friend1 and friend2 akan share the same numberOfFriends
-		System.out.println(Friend.numberOfFriends);
+		Bicycle bike = new Bicycle();
+		bike.stop();
 		
-//		kita bisa akses dari instance juga tapi ga direkomendasikan
-		System.out.println(friend1.numberOfFriends);
-		
-		Friend.displayFriends();
+		System.out.println(car.speed);
+		System.out.println(bike.speed);
+		System.out.println(car.doors);
+		System.out.println(bike.pedals);
 	}
 }
