@@ -1,23 +1,27 @@
 
 public class Main {
 	public static void main(String[] args) {
-//	overloaded constructors adalah multiple constructors within a class with the same name but have different parameters
-//	name + parameters = signature
-		Pizza pizza1 = new Pizza("thicc crust");
-		Pizza pizza2 = new Pizza("thicc crust", "tomato");
-		Pizza pizza3 = new Pizza("thicc crust", "tomato", "mozzarella");
-		Pizza pizza4 = new Pizza("thicc crust", "tomato", "mozzarella", "pepperoni");
+
+		Food[] refrigerator = new Food[3];
 		
-		System.out.println("Here are the ingredients of your pizza: ");
-		System.out.println(pizza1.bread);
-		System.out.println(pizza2.bread);
-		System.out.println(pizza2.sauce);
-		System.out.println(pizza3.bread);
-		System.out.println(pizza3.sauce);
-		System.out.println(pizza3.cheese);
-		System.out.println(pizza4.bread);
-		System.out.println(pizza4.sauce);
-		System.out.println(pizza4.cheese);
-		System.out.println(pizza4.topping);	
+		Food food1 = new Food("pizza");
+		Food food2 = new Food("hamburger");
+		Food food3 = new Food("hotdog");
+		
+		Food[] refrigerator2 = {food1, food2, food3};
+		
+		refrigerator[0] = food1;
+		refrigerator[1] = food2;
+		refrigerator[2] = food3;
+		
+		System.out.println(refrigerator[0]);
+//		hasilnya Food@5acf9800
+		
+		System.out.println(refrigerator[0].name);
+		System.out.println(refrigerator[1].name);
+		System.out.println(refrigerator[2].name);
+		System.out.println(refrigerator2[0].name);
+		System.out.println(refrigerator2[1].name);
+		System.out.println(refrigerator2[2].name);
 	}
 }
