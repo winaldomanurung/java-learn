@@ -1,13 +1,11 @@
 
 public class Main {
 	public static void main(String[] args) {
-		Human human1 = new Human("Rick", 65, 70);
-		Human human2 = new Human("Morty", 16, 50);
+//		local variable = declared inside a method (visible only to that method)
+//		global variable = declared outside a method, but within a class (visible to all parts of class)
 		
-		System.out.println(human1.name);
-		System.out.println(human2.name);
+		DiceRoller diceRoller = new DiceRoller();
 		
-		human1.eat();
-		human2.drink();
+		
 	}
 }
