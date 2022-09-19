@@ -1,30 +1,38 @@
 import java.util.Scanner;
+import java.util.InputMismatchException;
 
 public class Main {
 	public static void main(String[] args) {
-//		dynamic polymorphism
-//		dynamic mean change after the compilation process (during runtime)
-//		ex: A corvette is a: corvette, car, vehicle, object
-	
-//		Misal kita mau buat animal, yang bisa saja Dog atau Cat
-//		Kita bisa tanyakan ke user during runtime
+//		exception is an event that occurs during the execution of a program that disrupts the normal flow of instructions
+		
 		Scanner scanner = new Scanner(System.in);
-		Animal animal = new Dog();
 		
-		System.out.println("What animal do you want?");
-		System.out.println("(1 = dog) or (2 = cat): ");
-		int choice = scanner.nextInt();
+		try {
+		System.out.println("Enter a whole number to divide: ");
+		int x = scanner.nextInt();
 		
-		if(choice == 1) {
-			animal = new Dog();
-			animal.speak();
-		} else if(choice == 2) {
-			animal = new Cat();
-			animal.speak();
-		} else {
-			animal = new Animal();
-			System.out.println("That choice is invalid.");
-			animal.speak();
+		System.out.println("Enter a whole number to divide by: ");
+		int y = scanner.nextInt();
+		
+		int z = x/y;
+		
+		System.out.println("Result: " + z);
+		}
+		catch(ArithmeticException e) {
+			System.out.println("You can't divide by zero!");
+		}
+		catch(InputMismatchException e) {
+			System.out.println("Please enter a valid number!");
+		}
+//		kalau mau general
+		catch(Exception e) {
+			System.out.println("Something went wrong!");
+		}
+		
+//		finally akan selalu diexecute
+		finally {
+			scanner.close();
+			System.out.println("This will always print");
 		}
 	}
 }
