@@ -1,20 +1,41 @@
 
 public class Main {
 	public static void main(String[] args) {
-//		Encapsulation means attributes of a class will be hidden or private
-//		It can be accessed only through special methods (getters and setters)
-//		You should make attributes private if you don't have a reason to make them public/protected
+		Car car1 = new Car("Chevrolet", "Camaro", 2021);
+		Car car2 = new Car("Ford", "Mustang", 2022);
 		
-		Car car = new Car("Chevrolet", "Camaro", 2021);
+//		cara copy object bukan dengan:
+//		car1 = car2 (ini akan menghasilkan object dengan address yang sama)
+//		melainkan dengan:
 		
-//		disini kita panggil method getternya
-		System.out.println(car.getMake());
-		System.out.println(car.getModel());
-		System.out.println(car.getYear());
+		car2.copy(car1);
 		
-//		car.year = 2022;
-//		ini ga akan work karena dia ga bisa menjangkau year yang sifatnya private, untuk itu kita buat setter
-		car.setYear(2022);
-		System.out.println(car.getYear());
+//		atau jika kita mau copy langsung tanpa instantiate car2
+//		namun syaratnya kita harus buat overloaded constructor
+		Car car1b = new Car("Chevrolet", "Camaro", 2021);
+		Car car2b = new Car(car1b);
+		
+		System.out.println(car1);
+		System.out.println(car2);
+		System.out.println();
+		System.out.println(car1.getMake());
+		System.out.println(car1.getModel());
+		System.out.println(car1.getYear());
+		System.out.println();
+		System.out.println(car2.getMake());
+		System.out.println(car2.getModel());
+		System.out.println(car2.getYear());
+		
+		System.out.println();
+		System.out.println(car1b);
+		System.out.println(car2b);
+		System.out.println();
+		System.out.println(car1b.getMake());
+		System.out.println(car1b.getModel());
+		System.out.println(car1b.getYear());
+		System.out.println();
+		System.out.println(car2b.getMake());
+		System.out.println(car2b.getModel());
+		System.out.println(car2b.getYear());
 	}
 }

@@ -4,20 +4,20 @@ public class Car {
 	private String model;
 	private int year;
 	
-//	karena kita akan menggunakan setter, constructor ini:
-//	Car(String make, String model, int year){
-//		this.make = make;
-//		this.model = model;
-//		this.year = year;	
-//	}
-//	...kita ganti dengan:
+
 	Car(String make, String model, int year){
-	this.setMake(make);
-	this.setModel(model);
-	this.setYear(year);	
-}
+		this.setMake(make);
+		this.setModel(model);
+		this.setYear(year);	
+	}
 	
-//	karena semua field merupakan private kita butuh menggunakan getter untuk membuka aksesnya ke Class lain
+//	overloaded constructor
+	Car(Car x){
+		this.copy(x);
+	}
+	
+//	getter
+	
 	public String getMake() {
 		return make;
 	}
@@ -30,7 +30,7 @@ public class Car {
 		return year;
 	}
 	
-//	kita buat setter
+//	setter
 	
 	public void setMake(String make) {
 		this.make = make;
@@ -42,5 +42,12 @@ public class Car {
 	
 	public void setYear(int year) {
 		this.year = year;
+	}
+	
+//	method untuk copy
+	public void copy(Car x) {
+		this.setMake(x.make);
+		this.setModel(x.model);
+		this.setYear(x.year);
 	}
 }
