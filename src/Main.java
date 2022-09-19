@@ -1,18 +1,23 @@
 
 public class Main {
 	public static void main(String[] args) {
-//		interface is a template that can be applied to a class
-//		it is similar to inheritance, but specifies what a class has/must do
-//		classes can apply to more than one interface, inheritance is limited to 1 super class
+//		polymorphism is the ability of an object to identifying more than one type
+		Car car = new Car();
+		Bicycle bicycle = new Bicycle();
+		Boat boat = new Boat();
 		
-		Rabbit rabbit = new Rabbit();
-		rabbit.flee();
+//		Misal kita mau buat array berisi car, bicycle, boat. Apa type yang harus kita define?
+//		racers = {car, bicycle, boat};
+//		karena mereka sama2 turunan dari Vehicle maka kita bisa buat:
+		Vehicle[] racers = {car, bicycle, boat};
 		
-		Hawk hawk = new Hawk();
-		hawk.hunt();
-		
-		Fish fish = new Fish();
-		fish.hunt();
-		fish.flee();
+//		car.go();
+//		bicycle.go();
+//		boat.go();
+//		kita bisa ganti dengan:
+		for(Vehicle x : racers) {
+			x.go();
+		}
+	
 	}
 }
